@@ -1,11 +1,11 @@
 
 import { 
   Cloud, 
-  Docker, 
-  Kubernetes, 
+  Box, // Instead of Docker
+  Globe, // Instead of Kubernetes
   Github, 
-  Prometheus, 
-  Grafana, 
+  BarChart, // Instead of Prometheus
+  LineChart, // Instead of Grafana
   Database, 
   GraduationCap
 } from "lucide-react";
@@ -25,7 +25,7 @@ const Skills = () => {
           
           <SkillCategory 
             title="DevOps Tools" 
-            icon={<Docker className="w-8 h-8 text-blue-500" />}
+            icon={<Box className="w-8 h-8 text-blue-500" />}
             skills={[
               "Docker", 
               "Kubernetes", 
@@ -64,7 +64,7 @@ const Skills = () => {
           
           <SkillCategory 
             title="Soft Skills" 
-            icon={<Kubernetes className="w-8 h-8 text-blue-500" />}
+            icon={<Globe className="w-8 h-8 text-blue-500" />}
             skills={[
               "Communication", 
               "Leadership", 
