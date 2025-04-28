@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
-  base: '/dhananjay-lakkawar-portfolio-site/',  // <-- comma added here
+  base: '/lakkaward.github.io/',  // <-- comma added here
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
