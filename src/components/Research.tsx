@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText } from "lucide-react";
+import { FileText, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Research = () => {
   return (
@@ -41,6 +42,19 @@ const Research = () => {
                 <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
                   CPU Inference
                 </span>
+              </div>
+              <div className="mt-4">
+                <Button variant="outline" size="sm" asChild>
+                  <a 
+                    href="/path-to-your-research-paper.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <FileText className="w-4 h-4" />
+                    <span>Read Full Paper</span>
+                  </a>
+                </Button>
               </div>
             </CardContent>
           </Card>

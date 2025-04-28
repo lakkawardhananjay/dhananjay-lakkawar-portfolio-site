@@ -1,11 +1,14 @@
-
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Github, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const projects = [
   {
     title: "On-Premise LLM Deployment",
     description: "Deployed large language models on local infrastructure optimized for CPU environments, enabling private AI capabilities with reduced operational costs.",
     technologies: ["Python", "Docker", "CUDA", "Hugging Face", "LLM"],
+    github: "https://github.com/yourusername/llm-deployment",
+    demo: "https://llm-demo.yourdomain.com"
   },
   {
     title: "Jenkins CI/CD Pipeline with Testing",
@@ -47,6 +50,8 @@ const Projects = () => {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
+              github={project.github}
+              demo={project.demo}
             />
           ))}
         </div>
@@ -58,11 +63,15 @@ const Projects = () => {
 const ProjectCard = ({ 
   title, 
   description, 
-  technologies 
+  technologies,
+  github,
+  demo 
 }: { 
   title: string; 
   description: string; 
-  technologies: string[] 
+  technologies: string[];
+  github?: string;
+  demo?: string;
 }) => {
   return (
     <Card className="h-full flex flex-col hover:shadow-lg transition-shadow">
@@ -72,7 +81,7 @@ const ProjectCard = ({
       <CardContent className="flex-grow">
         <p className="text-gray-700 text-sm">{description}</p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex flex-col gap-4">
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
             <span 
@@ -82,6 +91,24 @@ const ProjectCard = ({
               {tech}
             </span>
           ))}
+        </div>
+        <div className="flex gap-2">
+          {github && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Github className="w-4 h-4" />
+                <span>GitHub</span>
+              </a>
+            </Button>
+          )}
+          {demo && (
+            <Button variant="outline" size="sm" asChild>
+              <a href={demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <ExternalLink className="w-4 h-4" />
+                <span>Live Demo</span>
+              </a>
+            </Button>
+          )}
         </div>
       </CardFooter>
     </Card>
