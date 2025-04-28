@@ -33,7 +33,7 @@ jobs:
           cache: 'npm' # Cache npm dependencies
 
       - name: Install Dependencies 📦
-        run: npm ci # Use 'ci' for cleaner installs in CI/CD
+        run: npm install # Use 'ci' for cleaner installs in CI/CD
 
       - name: Build Application 🏗️
         run: npm run build # Assumes 'build' script generates output in 'dist' or 'build' folder
