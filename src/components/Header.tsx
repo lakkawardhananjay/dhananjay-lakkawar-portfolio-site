@@ -28,13 +28,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#hero" className="flex items-center">
-          <img 
-            src="/lovable-uploads/8edc4fa5-0845-4b19-bf17-7bd0b3ed4931.png" 
-            alt="DL Logo" 
-            className="h-10 w-10"
-          />
-        </a>
+        <a href="#hero" className="text-xl font-bold text-blue-800">DL</a>
         <nav className="hidden md:flex space-x-6">
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
