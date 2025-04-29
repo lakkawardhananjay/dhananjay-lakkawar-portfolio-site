@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -29,13 +28,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#hero" className="flex items-center">
-          <img 
-            src="/public/lovable-uploads/173ca81a-9f80-481a-b1a3-d34cd0af61ed.png" 
-            alt="DL Logo" 
-            className="h-10 w-10" 
-          />
-        </a>
+        <a href="#hero" className="text-xl font-bold text-blue-800">DL</a>
         <nav className="hidden md:flex space-x-6">
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
